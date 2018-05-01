@@ -40,7 +40,7 @@ public class CorsoDAO {
 				Corso c = new Corso(codins, numeroCrediti, nome, periodoDidattico);
 				corsi.add(corsomap.get(c));
 			}
-
+			
 			return corsi;
 
 		} catch (SQLException e) {
@@ -95,8 +95,6 @@ public class CorsoDAO {
 				
 				s.getCorsi().add(corsomap.get(c));
 			}
-
-			conn.close();
 			
 		} catch (SQLException e) {
 			// e.printStackTrace();

@@ -28,8 +28,6 @@ public class StudenteDAO {
 				result.add(studentimap.get(s));
 			}
 
-			conn.close();
-
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}
@@ -57,7 +55,6 @@ public class StudenteDAO {
 				c.getStudenti().add(studentemap.get(s));  //non direttamente l'oggetto, ma il riferimento restituito da StudenteIdMap
 			}
 
-			conn.close();
 
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
