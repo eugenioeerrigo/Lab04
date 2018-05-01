@@ -1,17 +1,25 @@
 package it.polito.tdp.lab04.model;
 
+import java.util.*;
+
 public class Corso {
 
 	private String codins;
 	private int numeroCrediti;
 	private String nome;
 	private int periodoDidattico;
+	private List<Studente> studenti;
+	
+	public Corso() {
+		studenti = new ArrayList<>();
+	}
 	
 	public Corso(String codins, int numeroCrediti, String nome, int periodoDidattico) {
 		this.codins= codins;
 		this.numeroCrediti = numeroCrediti;
 		this.nome = nome;
 		this.periodoDidattico = periodoDidattico;
+		studenti = new ArrayList<>();
 	}
 
 	public String getCodins() {
@@ -74,6 +82,14 @@ public class Corso {
 		} else if (!codins.equals(other.codins))
 			return false;
 		return true;
+	}
+
+	public List<Studente> getStudenti() {
+		return studenti;
+	}
+
+	public void setStudenti(List<Studente> studenti) {
+		this.studenti = studenti;
 	}
 
 	
